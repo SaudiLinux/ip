@@ -4,7 +4,7 @@ A simple tool for collecting and analyzing phone number information, developed b
 
 ## Prerequisites
 
-- Python 3.6 or newer
+- Python 3.9 or newer
 - Required Python libraries (listed in requirements.txt)
 
 ## Installation
@@ -18,7 +18,7 @@ A simple tool for collecting and analyzing phone number information, developed b
 
 1. Create a virtual environment:
    ```
-   python -m venv venv
+   python3 -m venv venv
    ```
 
 2. Activate the virtual environment:
@@ -43,7 +43,7 @@ A simple tool for collecting and analyzing phone number information, developed b
 1. On Windows, run the `run_tool.bat` file by double-clicking it.
 2. Or run the tool directly from the command line:
    ```
-   python phone_info_tool.py +966501234567
+   python3 phone_info_tool.py +966501234567
    ```
 
 ### Graphical User Interface
@@ -51,7 +51,7 @@ A simple tool for collecting and analyzing phone number information, developed b
 1. On Windows, run the `run_gui.bat` file by double-clicking it.
 2. Or run the GUI directly from the command line:
    ```
-   python gui_tool.py
+   python3 gui_tool.py
    ```
 
 3. Enter the phone number in the designated field.
