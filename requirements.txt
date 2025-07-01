@@ -1,0 +1,8 @@
+phonenumbers==8.13.11
+pytz==2023.3
+requests==2.31.0
+geopy==2.3.0
+pretty-html-table==0.9.16
+openpyxl==3.1.2
+pandas==2.0.3
+colored==1.4.4
