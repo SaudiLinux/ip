@@ -21,20 +21,21 @@ import requests
 import pandas as pd
 from datetime import datetime
 import pytz
-from colored import fg, bg, attr
+# استخدام رموز ANSI مباشرة بدلاً من مكتبة colored
 from geopy.geocoders import Nominatim
-from pretty_html_table import build_table
+# تجاوز استخدام مكتبة pretty-html-table
+# from pretty_html_table import build_table
 
 # ANSI color codes for terminal output
 COLORS = {
-    'green': fg('green'),
-    'blue': fg('blue'),
-    'red': fg('red'),
-    'yellow': fg('yellow'),
-    'cyan': fg('cyan'),
-    'magenta': fg('magenta'),
-    'reset': attr('reset'),
-    'bold': attr('bold')
+    'green': '\033[32m',
+    'blue': '\033[34m',
+    'red': '\033[31m',
+    'yellow': '\033[33m',
+    'cyan': '\033[36m',
+    'magenta': '\033[35m',
+    'reset': '\033[0m',
+    'bold': '\033[1m'
 }
 
 
@@ -374,7 +375,8 @@ class PhoneInfoTool:
                                 flat_data[f"{category}_{key}"] = value
                 
                 df = pd.DataFrame([flat_data])
-                html_table = build_table(df, 'blue_light')
+                # Replace build_table with pandas' to_html method with some basic styling
+                html_table = df.to_html(classes='table table-striped table-hover', border=0)
                 
                 html_content = f"""
                 <!DOCTYPE html>
