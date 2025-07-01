@@ -7,7 +7,7 @@ echo.
 :: التحقق من وجود Python
 python --version > nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
-    echo [!] خطأ: لم يتم العثور على Python. يرجى تثبيت Python 3.6 أو أحدث.
+    echo [!] خطأ: لم يتم العثور على Python. يرجى تثبيت Python 3.9 أو أحدث.
     exit /b 1
 )
 
